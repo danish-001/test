@@ -1,0 +1,138 @@
+body {
+    background-color: white;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: cornflowerblue;
+    width: 100%;
+    position: fixed;
+    height: 50px;
+}
+
+ul {
+    margin: top;
+    text-align: center;
+}
+
+li {
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 14px;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+    background-color: cornflowerblue;
+}
+
+h3 {
+    color: black;
+    text-align: center;
+    background-color: cornflowerblue;
+}
+
+img {
+    width: 70%;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#main {
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+    width: 400px;
+    height: 600px;
+    display: block;
+}
+
+p {
+    color: darkblue;
+    font-size: 20px;
+    line-height: 48px;
+    margin-top: 50px;
+    padding: 10px 20px;
+}
+
+main {
+    display: grid;
+    /* min-width: 800px; */
+    grid-template: 180px / 33% 33% 33%;
+    justify-items: center;
+    justify-content: center;
+    /* align-items: stretch; */
+    /* grid-auto-flow: row; */
+    /* position: relative; */
+    grid-gap: 10px;
+    margin-top: 40px;
+    /* grid-auto-rows: 100px; */
+}
+
+.place{
+    width: 33.33%;
+    text-align: center;
+   
+}
+
+h1{
+    text-align: center;
+    font-family: cursive;
+}
+
+h2{
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+h4{
+    text-align: center;
+    font-family: cursive;
+    font-weight: bolder;
+}
+
+#leaf{
+    height: auto;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    /* width: 50px; */
+    /* padding-left: 240px; */
+}
+
+#tree{
+    height: auto;
+    align-items: center;
+    /* width: 50px; */
+    /* padding-left: 240px; */
+}
+
+#temp{
+    height: auto;
+    align-items: center;
+    /* width: 50px; */
+    /* padding-left: 240px; */
+}
+
+.fact{
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+#paragraph{
+    color: #006400;
+}
+
+#unique{
+    /* height: 100px; */
+}
