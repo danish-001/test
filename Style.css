@@ -2,6 +2,7 @@ body {
     background-color: white;
     margin: 0 auto;
     overflow-x: hidden;
+    background: aquamarine;
 }
 
 header {
@@ -9,6 +10,7 @@ header {
     width: 100%;
     position: fixed;
     height: 50px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 ul {
@@ -55,7 +57,8 @@ img {
 }
 
 p {
-    color: darkblue;
+    color: white;
+    background: brown;
     font-size: 20px;
     line-height: 48px;
     margin-top: 50px;
@@ -128,10 +131,6 @@ h4{
 .fact{
     margin-top: 40px;
     font-weight: bold;
-}
-
-#paragraph{
-    color: #006400;
 }
 
 #unique{
