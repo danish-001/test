@@ -18,6 +18,11 @@ ul {
     text-align: center;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
 li {
     color: white;
     font-family: 'Oswald', sans-serif;
