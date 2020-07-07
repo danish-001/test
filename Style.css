@@ -2,11 +2,11 @@ body {
     background-color: white;
     margin: 0 auto;
     overflow-x: hidden;
-    background: aquamarine;
+    background: #555;
 }
 
 header {
-    background-color: cornflowerblue;
+    background-color: rgb(119, 88, 88);
     width: 100%;
     position: fixed;
     height: 50px;
@@ -32,19 +32,19 @@ li {
     font-weight: bold;
     display: inline-block;
     margin-right: 14px;
-    flex: 1 0 70px;
+    //flex: 1 0 50px;
 }
 
 h1 {
     color: black;
     text-align: center;
-    background-color: cornflowerblue;
+    background-color: white;
 }
 
 h3 {
     color: black;
     text-align: center;
-    background-color: cornflowerblue;
+    background-color: white;
 }
 
 img {
@@ -74,23 +74,25 @@ p {
 }
 
 main {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 0;;
     /* min-width: 800px; */
-    grid-template: 180px / 33% 33% 33%;
+    /* grid-template: 180px / 33% 33% 33%; */
     justify-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    /* justify-content: center; */
     /* align-items: stretch; */
     /* grid-auto-flow: row; */
     /* position: relative; */
-    grid-gap: 10px;
+    /* grid-gap: 10px; */
     margin-top: 40px;
     /* grid-auto-rows: 100px; */
 }
 
 .place{
     width: 33.33%;
-    text-align: center;
-   
+    text-align: center; 
 }
 
 h1{
