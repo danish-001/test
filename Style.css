@@ -16,11 +16,13 @@ header {
 ul {
     margin: top;
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 a{
     text-decoration: none;
-    color: black;
+    color: black; 
 }
 
 li {
@@ -30,6 +32,7 @@ li {
     font-weight: bold;
     display: inline-block;
     margin-right: 14px;
+    flex: 1 0 70px;
 }
 
 h1 {
