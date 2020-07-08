@@ -32,7 +32,7 @@ li {
     font-weight: bold;
     display: inline-block;
     margin-right: 14px;
-    //flex: 1 0 50px;
+    /* flex: 1 0 50px; */
 }
 
 h1 {
