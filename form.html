@@ -1,50 +1,73 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pizza Form</title>
 </head>
 
 <body>
     <form action="">
+
+        <h1>Pizzaaaaaa Space</h1><br>
+
         <label for="fname">First Name</label><br><br>
-        <input name="fname" type="text" placeholder="Enter your first name"  required/>
+        <input name="fname" type="text" placeholder="Enter your first name" required />
 
         <br><br>
 
         <label for="lname">Last Name</label><br><br>
-        <input name="lname" type="text" placeholder="Enter your last name" required/>
+        <input name="lname" type="text" placeholder="Enter your last name" required />
 
         <br><br>
 
         <label for="grad">Pizza</label><br><br>
+
         <input type="radio" name="radio">Thin Crust</input><br>
         <input type="radio" name="radio">Pan Style</input>
 
         <br><br>
 
         <label for="textarea">Describe your pizza</label><br>
-        <input name="textarea" type="textarea" rows="100" cols="100"/>
+        <input name="textarea" type="textarea" rows="100" cols="100" />
 
         <br><br>
 
         <label for="quanity">How many Pizzas</label><br>
-        <input type="number" name="quanity" step="1"/>
+        <input type="number" name="quanity" step="1" />
 
         <br><br>
 
         <label for="Extras">Extras</label><br>
-        <input type="text" name="Extras">
+        <input type="checkbox" name="Extras">Cheese</input><br>
+        <input type="checkbox" name="Extras">Paperoni</input><br>
+        <input type="checkbox" name="Extras">olives</input><br>
+        <input type="checkbox" name="Extras">cheese burst</input><br>
 
         <br><br>
 
         <label for="crispy">Crysp Level</label><br>
-        <input type="range" name="crispy" min="0" max="5" step="1"/>
+        <input type="range" name="crispy" min="0" max="5" step="1" />
 
         <br><br>
 
-        <input type="submit" value="send"/>
+        <input type="button" name="Click Me" value="Click Me" id="click_me" onclick="pizzas()" />
+        <input type="submit" value="send" />
     </form>
-    
+
 </body>
+
+<script>
+    function pizzas() {
+
+        document.getElementById("#click_me");
+
+        alert("Pizzaaaaa Space")
+
+        console.log("Button Clicked")
+    }
+
+    pizzas();
+</script>
+
 </html>
