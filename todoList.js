@@ -2,10 +2,14 @@
 const todoInput = document.querySelector(".todo-input");
 const todoButton = document.querySelector(".todo-button");
 const todoList = document.querySelector(".todo-list");
+const checkmarkButton = document.getElementsByClassName(".complete-btn");
+const trashButton = document.getElementsByClassName('.trash-btn')
 
 //event listner
 todoButton.addEventListener("click", addTodo);
-todoList.addEventListener("click", deleteCheck);
+// todoList.addEventListener("click", deleteCheck);
+checkmarkButton.addEventListener("click", checkmarkTodo);
+trashButton.addEventListener("click", deleteTodo);
 
 //functions
 function addTodo(event){
@@ -45,7 +49,7 @@ function addTodo(event){
 }
 
 //to delete the todo when clicked on the delete button
-function deleteCheck(e) { 
+function deleteTodo(e) { 
   const item = e.target;
 
   //deleting the todo
@@ -55,13 +59,16 @@ function deleteCheck(e) {
     todo.addEventListener('transitioned', function () {
       todo.remove()
     });
-    console.log('delete')
+    console.log('delete');
   }
-  
+}
+
+function checkmarkTodo() {
+
   //checkmark
-  if (item.classList[0] === "complete-btn") {
+  if (item.classList[0] === 'complete-btn') {
     const todo = item.parentElement;
-    todo.classList.toggle("completed");
-    console.log('check')
+    todo.classList.toggle('completed');
+    console.log('check');
   }
 }
