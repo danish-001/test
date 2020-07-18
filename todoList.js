@@ -3,6 +3,7 @@ const todoInput = document.querySelector(".todo-input");
 const todoButton = document.querySelector(".todo-button");
 const todoList = document.querySelector(".todo-list");
 
+// const todos = []
 
 //event listner
 todoButton.addEventListener("click", addTodo);
@@ -29,6 +30,7 @@ function addTodo(event){
   //checkmark button
   const completedButton = document.createElement('button');
   completedButton.innerHTML = '<i class="fas fa-check"></i>';
+  completedButton.type='button'
   completedButton.classList.add("complete-btn");
   todoDiv.appendChild(completedButton);
 
@@ -36,10 +38,13 @@ function addTodo(event){
   const trashButton = document.createElement('button');
   trashButton.innerHTML = '<i class="fas fa-trash"></i>';
   trashButton.classList.add("trash-btn");
+  trashButton.type = 'button'
   todoDiv.appendChild(trashButton);
 
   //now appending the whole todoDiv to the todo-list in the html
   todoList.appendChild(todoDiv);
+
+  // todos.appendChild(todoList);
 
   //clearing todo input after adding a todo
   todoInput.value = "";
@@ -59,7 +64,7 @@ function deleteCheck(e) {
   if (item.classList[0] === 'trash-btn') {
     const todo = item.parentElement
     todo.classList.add('fall')
-    todo.addEventListener('transitioned', function () {
+    todo.addEventListener('transitionend', function () {
       todo.remove()
     })
     console.log('delete')
@@ -72,3 +77,9 @@ function deleteCheck(e) {
     console.log('check')
   }
 }
+
+
+// function createElementsForList() {
+//   let ul = document.getElementById('todo-list')
+//   ul
+// }

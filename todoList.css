@@ -83,6 +83,14 @@ form button:hover{
     background: green;
 }
 
+.complete-btn:hover{
+    background: limegreen;
+}
+
+.trash-btn:hover{
+    background: orangered;
+}
+
 .todo-item{
     padding: 0rem 0.5rem;
 }
