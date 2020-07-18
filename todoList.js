@@ -2,14 +2,11 @@
 const todoInput = document.querySelector(".todo-input");
 const todoButton = document.querySelector(".todo-button");
 const todoList = document.querySelector(".todo-list");
-const checkmarkButton = document.getElementsByClassName(".complete-btn");
-const trashButton = document.getElementsByClassName('.trash-btn')
+
 
 //event listner
 todoButton.addEventListener("click", addTodo);
-// todoList.addEventListener("click", deleteCheck);
-checkmarkButton.addEventListener("click", checkmarkTodo);
-trashButton.addEventListener("click", deleteTodo);
+todoList.addEventListener("click", deleteCheck);
 
 //functions
 function addTodo(event){
@@ -48,27 +45,30 @@ function addTodo(event){
   todoInput.value = "";
 }
 
+// const checkmarkButton = document.getElementsByClassName('.complete-btn')
+// const trashButton = document.getElementsByClassName('.trash-btn')
+
+// checkmarkButton.addEventListener('click', checkmarkTodo)
+// trashButton.addEventListener('click', deleteTodo)
+
 //to delete the todo when clicked on the delete button
-function deleteTodo(e) { 
-  const item = e.target;
+function deleteCheck(e) {
+  const item = e.target
 
   //deleting the todo
-  if (item.classList[0] === "trash-btn") { 
-    const todo = item.parentElement;
-    todo.classList.add("fall");
+  if (item.classList[0] === 'trash-btn') {
+    const todo = item.parentElement
+    todo.classList.add('fall')
     todo.addEventListener('transitioned', function () {
       todo.remove()
-    });
-    console.log('delete');
+    })
+    console.log('delete')
   }
-}
-
-function checkmarkTodo() {
 
   //checkmark
   if (item.classList[0] === 'complete-btn') {
-    const todo = item.parentElement;
-    todo.classList.toggle('completed');
-    console.log('check');
+    const todo = item.parentElement
+    todo.classList.toggle('completed')
+    console.log('check')
   }
 }
