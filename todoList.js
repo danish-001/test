@@ -4,11 +4,12 @@ const todoButton = document.querySelector(".todo-button");
 const todoList = document.querySelector(".todo-list");
 
 //event listner
-todoButton.addEventListener('click', addTodo)
+todoButton.addEventListener("click", addTodo);
+todoList.addEventListener("click", deleteCheck);
 
 //functions
-function addTodo(){ 
-  
+function addTodo(event){
+
   //prevents form from submitting
   event.preventDefault();
 
@@ -18,24 +19,49 @@ function addTodo(){
 
   //create li
   const newTodo = document.createElement('li');
-  newTodo.innerHTML = "Workout";
-  newTodo.classList.add("todo-item");
+  newTodo.innerText = todoInput.value;
+  newTodo.classList.add('todo-item');
 
-  //putting li inside the Div we jsut created
+  //putting li inside the Div we just created
   todoDiv.appendChild(newTodo);
 
   //checkmark button
-  const checkmarkButton = document.createElement("button");
-  checkmarkButton.innerHTML = '<i class="fas fa-check"></i>';
-  checkmarkButton.classList.add("complete-btn");
-  todoDiv.appendChild(checkmarkButton)
+  const completedButton = document.createElement('button');
+  completedButton.innerHTML = '<i class="fas fa-check"></i>';
+  completedButton.classList.add("complete-btn");
+  todoDiv.appendChild(completedButton);
 
   //trash button
-  const trashButton = document.createElement("button");
+  const trashButton = document.createElement('button');
   trashButton.innerHTML = '<i class="fas fa-trash"></i>';
-  trashButton.classList.add("complete-btn");
-  todoDiv.appendChild(trashButton)
+  trashButton.classList.add("trash-btn");
+  todoDiv.appendChild(trashButton);
 
   //now appending the whole todoDiv to the todo-list in the html
-  todoList.appendChild(todoDiv)
+  todoList.appendChild(todoDiv);
+
+  //clearing todo input after adding a todo
+  todoInput.value = "";
+}
+
+//to delete the todo when clicked on the delete button
+function deleteCheck(e) { 
+  const item = e.target;
+
+  //deleting the todo
+  if (item.classList[0] === "trash-btn") { 
+    const todo = item.parentElement;
+    todo.classList.add("fall");
+    todo.addEventListener('transitioned', function () {
+      todo.remove()
+    });
+    console.log('delete')
+  }
+  
+  //checkmark
+  if (item.classList[0] === "complete-btn") {
+    const todo = item.parentElement;
+    todo.classList.toggle("completed");
+    console.log('check')
+  }
 }

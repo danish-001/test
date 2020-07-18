@@ -15,13 +15,12 @@ header{
     font-size: 2rem;
 }
 
-header, 
-form{
+header, form{
     min-height: 20vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 form input,
@@ -36,10 +35,67 @@ form button{
     color: #556655;
     background: white;
     cursor: pointer;
-
+    transition: all 0.3s ease;
 }
 
 form button:hover{
     background: #454545;
     color: white;
+}
+
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list{
+    min-width: 50%;
+    list-style: none;
+}
+
+.todo{
+    margin: 0.5rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.todo li{
+    flex: 1;
+}
+
+.complete-btn, .trash-btn{
+    background: #454545;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.complete-btn{
+    background: green;
+}
+
+.todo-item{
+    padding: 0rem 0.5rem;
+}
+
+.fa-trash, .fa-check{
+    pointer-events: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.fall{
+    transform: translateY(5rem) rotateZ(20deg);
+    opacity: 0;
 }
